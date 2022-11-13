@@ -2,5 +2,7 @@
 
 ## About
 
-## How to setup
+## How to set up
+
+- by Symfony CLI: `symfony server:start`
 
