@@ -17,7 +17,7 @@ final class Language
             throw new InvalidLanguageNameException();
         }
 
-        if (strlen($code) != 3) {
+        if (strlen($code) !== 3) {
             throw new InvalidLanguageCodeException();
         }
     }

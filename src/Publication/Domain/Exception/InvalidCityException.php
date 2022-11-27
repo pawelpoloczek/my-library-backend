@@ -6,6 +6,6 @@ namespace MyLibrary\Publication\Domain\Exception;
 
 use InvalidArgumentException;
 
-class InvalidPublishYearExpection extends InvalidArgumentException
+class InvalidCityException extends InvalidArgumentException
 {
 }

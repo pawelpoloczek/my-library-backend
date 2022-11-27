@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace MyLibrary\Publication\Domain\ValueObject;
 
-use MyLibrary\Publication\Domain\Exception\InvalidPublishYearExpection;
+use MyLibrary\Publication\Domain\Exception\InvalidPublishYearException;
 
-class PublishYear
+final class PublishYear
 {
     public function __construct(
      public readonly int $year
@@ -16,7 +16,7 @@ class PublishYear
             ($length < 3 || $length > 4)
             || $year <= 800
         ) {
-            throw new InvalidPublishYearExpection();
+            throw new InvalidPublishYearException();
         }
     }
 

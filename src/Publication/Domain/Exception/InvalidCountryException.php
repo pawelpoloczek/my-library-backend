@@ -6,6 +6,6 @@ namespace MyLibrary\Publication\Domain\Exception;
 
 use InvalidArgumentException;
 
-class InvalidLanguageNameException extends InvalidArgumentException
+class InvalidCountryException extends InvalidArgumentException
 {
 }
