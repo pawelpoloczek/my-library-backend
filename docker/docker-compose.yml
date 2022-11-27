@@ -23,5 +23,22 @@ services:
             - php-fpm
         networks:
             - my-library-network
+
+    database:
+        image: postgres:${POSTGRES_VERSION:-14}-alpine
+        environment:
+            POSTGRES_DB: ${POSTGRES_DB:-myLibrary}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-myLibraryPass}
+            POSTGRES_USER: ${POSTGRES_USER:-myLibrary}
+        volumes:
+            - db-data:/var/lib/postgresql/data:rw
+        ports:
+            - "5432"
+        networks:
+            - my-library-network
+
+volumes:
+    db-data:
+
 networks:
     my-library-network:
