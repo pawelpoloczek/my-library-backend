@@ -33,7 +33,7 @@ services:
         volumes:
             - db-data:/var/lib/postgresql/data:rw
         ports:
-            - "5432"
+            - "${POSTGRESQL_HOST_PORT}:5432"
         networks:
             - my-library-network
 
