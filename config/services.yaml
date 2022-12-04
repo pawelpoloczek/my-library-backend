@@ -17,3 +17,7 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Shared/Infrastructure/Symfony/Kernel.php'
+
+    _instanceof:
+        MyLibrary\Shared\Infrastructure\Doctrine\Type\AbstractEnumType:
+            tags: [ 'app.doctrine_enum_type' ]
