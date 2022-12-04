@@ -16,4 +16,4 @@ services:
         exclude:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
-            - '../src/Shared/Infrastructure/Kernel.php'
+            - '../src/Shared/Infrastructure/Symfony/Kernel.php'
